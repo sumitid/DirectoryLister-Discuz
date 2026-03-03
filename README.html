@@ -20,33 +20,16 @@ Demo：http://www.080100.xyz
 - 2026/03/03，友情链接改成独立文件
 - 2026/03/03，间距调整为5px，布局更紧凑
 ---
-### 程序放在网站子目录不显示README.html 的解决方法
-因为程序有个判断 `README.html` 路径的代码，而如果是正常使用域名或IP，都是可以自适应的。
-
-但是如果把程序放在子目录下，就会无法获取正确 `README.html` 路径，需要你手动修改下程序里的每一行代码。
-
-假设你将程序放在了子目录 `discuz41` 中（也就是 `http://xxx.xx/discuz41`）才能访问到程序网页。
-
-首先打开该文件： `/index.php`
-
-找到第5行的： `$suffix_array = explode('.', $_SERVER['HTTP_HOST']);`
-
-将其修改为： `$suffix_array = explode('.', $_SERVER['HTTP_HOST'].'/discuz41');`
+README.html文件是说明文件
 ---
-### 简介功能说明
-可以在每个文件夹下面放一个 `README.html` 文件，这个文件里写着简介说明内容即可。
-
-为了避免中文乱码，把 `README.html` 文件用 UTF-8 无BOM编码保存！
-
-**注意**：本主题已将README显示位置调整到网盘框下方、友情链接上方，间距5px。
-
----
-项目根目录/
-├── index.php          # 主文件
-├── header.php         # 头部文件
-├── footer.php         # 页脚文件
-├── links.php          # 友情链接文件
-├── README.md          # 项目说明
-└── resources/
-    └── themes/
-        └── Discuz41/
+项目根目录/                  
+├── README.md               # 项目说明（根目录）
+├── index.php               # 主文件
+└── resources/              （资源文件夹）
+    └── themes/             （主题文件夹）
+        └── Discuz41/       ← 主题文件夹，里面放所有文件
+            ├── index.php        # 首页文件
+            ├── header.php       # 头部文件
+            ├── footer.php       # 页脚文件
+            ├── links.php        # 友情链接文件
+            └── theme.txt        # 主题介绍
