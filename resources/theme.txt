@@ -1,0 +1,9 @@
+{
+    "name": "Discuz41",
+    "version": "1.0",
+    "author": "凡星儿",
+    "description": "Discuz! 4.1.0 经典风格主题",
+    "thumb": "thumbnail.png",
+    "url": "https://yunpan.download",
+    "last_update": "2026-02-02"
+}
